@@ -1,0 +1,195 @@
+object frmMain: TfrmMain
+  Left = 350
+  Height = 488
+  Top = 250
+  Width = 1040
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'PhotoDate v0.1 - 사진관리 프로그램'
+  ClientHeight = 488
+  ClientWidth = 1040
+  LCLVersion = '4.2.0.0'
+  object GroupBox1: TGroupBox
+    Left = 15
+    Height = 184
+    Top = 8
+    Width = 1009
+    Caption = '작업대상'
+    ClientHeight = 167
+    ClientWidth = 1005
+    TabOrder = 0
+    object lsvFileList: TListView
+      Left = 8
+      Height = 155
+      Top = 7
+      Width = 863
+      Columns = <      
+        item
+          Caption = '파일명'
+          Width = 500
+        end      
+        item
+          Caption = '파일크기'
+          Width = 130
+        end>
+      GridLines = True
+      TabOrder = 0
+      ViewStyle = vsReport
+    end
+    object btnFolderSel: TButton
+      Left = 878
+      Height = 34
+      Top = 7
+      Width = 120
+      Caption = '대상폴더선택'
+      TabOrder = 1
+      OnClick = btnFolderSelClick
+    end
+    object btnClear: TButton
+      Left = 878
+      Height = 34
+      Top = 48
+      Width = 120
+      Caption = '초기화'
+      TabOrder = 2
+      OnClick = btnClearClick
+    end
+    object Label_ImgCount: TLabel
+      Left = 881
+      Height = 12
+      Top = 90
+      Width = 70
+      Caption = '총 이미지 : 0'
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 17
+    Height = 143
+    Top = 201
+    Width = 1008
+    Caption = '옵션'
+    ClientHeight = 126
+    ClientWidth = 1004
+    TabOrder = 1
+    object GroupBox3: TGroupBox
+      Left = 16
+      Height = 82
+      Top = 8
+      Width = 169
+      Caption = '이미지정보'
+      ClientHeight = 65
+      ClientWidth = 165
+      TabOrder = 0
+      object RadioButton1: TRadioButton
+        Left = 13
+        Height = 19
+        Top = 9
+        Width = 37
+        Caption = 'Exif'
+        Checked = True
+        TabOrder = 1
+        TabStop = True
+      end
+      object RadioButton2: TRadioButton
+        Left = 13
+        Height = 19
+        Top = 37
+        Width = 105
+        Caption = '파일명UNIX타임'
+        TabOrder = 0
+      end
+    end
+    object GroupBox4: TGroupBox
+      Left = 193
+      Height = 76
+      Top = 10
+      Width = 158
+      Caption = '파일중복시'
+      ClientHeight = 59
+      ClientWidth = 154
+      TabOrder = 1
+      object rdoMove: TRadioButton
+        Left = 8
+        Height = 19
+        Top = 7
+        Width = 42
+        Caption = '이동'
+        Checked = True
+        TabOrder = 1
+        TabStop = True
+      end
+      object rdoCopy: TRadioButton
+        Left = 8
+        Height = 19
+        Top = 32
+        Width = 42
+        Caption = '복사'
+        TabOrder = 0
+      end
+    end
+    object Edit_target: TEdit
+      Left = 18
+      Height = 23
+      Top = 98
+      Width = 849
+      TabOrder = 2
+    end
+    object btnTarget: TButton
+      Left = 876
+      Height = 34
+      Top = 88
+      Width = 120
+      Caption = '이동폴더선택'
+      TabOrder = 3
+      OnClick = btnTargetClick
+    end
+  end
+  object GroupBox5: TGroupBox
+    Left = 17
+    Height = 129
+    Top = 351
+    Width = 1008
+    Caption = '작업상태'
+    ClientHeight = 112
+    ClientWidth = 1004
+    TabOrder = 2
+    object Label1: TLabel
+      Left = 12
+      Height = 12
+      Top = 11
+      Width = 106
+      Caption = '작업이미지 갯수 : 0'
+    end
+    object Label2: TLabel
+      Left = 160
+      Height = 12
+      Top = 11
+      Width = 86
+      Caption = '폴더 생 갯수 : 0'
+    end
+    object ProgBar: TProgressBar
+      Left = 12
+      Height = 33
+      Top = 33
+      Width = 979
+      TabOrder = 0
+    end
+    object btnWorkStart: TButton
+      Left = 876
+      Height = 34
+      Top = 72
+      Width = 120
+      Caption = '작업시작'
+      TabOrder = 1
+      OnClick = btnWorkStartClick
+    end
+    object Label3: TLabel
+      Left = 12
+      Height = 12
+      Top = 83
+      Width = 197
+      Caption = 'https://skshpapa80.blogspot.com/'
+      OnClick = Label3Click
+    end
+  end
+end
