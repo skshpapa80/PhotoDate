@@ -4,4 +4,5 @@
 수정일 : 2025-11-09 <br />
 블로그 : https://skshpapa80.blogspot.com/
 
-exif 정보를 이용한 파일 정리 프로그램        
+exif 정보를 이용한 파일 정리 프로그램     
+Lazarus 4.2 로 작업하였음 
